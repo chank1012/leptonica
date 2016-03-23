@@ -19,10 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{B605B71A-F555-4A19-9FC6-BFDB9F465C05}</ProjectGuid>
-    <RootNamespace>unicharset_extractor</RootNamespace>
+    <ProjectGuid>{1B3D3985-89C3-4303-9324-54EB889EBE09}</ProjectGuid>
+    <RootNamespace>mftraining</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
-    <ProjectName>unicharset_extractor</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -42,14 +41,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>NotSet</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>NotSet</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -81,12 +80,9 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>
-      </SDLCheck>
+      <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)tesseract_master\vs2010\port;$(SolutionDir)tesseract_master\api;$(SolutionDir)tesseract_master\ccmain;$(SolutionDir)tesseract_master\ccutil;$(SolutionDir)tesseract_master\ccstruct;$(SolutionDir)tesseract_master\classify;$(SolutionDir)tesseract_master\cube;$(SolutionDir)tesseract_master\cutil;$(SolutionDir)tesseract_master\dict;$(SolutionDir)tesseract_master\neural_networks\runtime;$(SolutionDir)tesseract_master\textord;$(SolutionDir)tesseract_master\viewer;$(SolutionDir)tesseract_master\opencl;$(SolutionDir)tesseract_master\wordrec;$(SolutionDir)leptonica\src</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <StringPooling>true</StringPooling>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
@@ -112,12 +108,9 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>
-      </SDLCheck>
+      <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>$(SolutionDir)tesseract_master\vs2010\port;$(SolutionDir)tesseract_master\api;$(SolutionDir)tesseract_master\ccmain;$(SolutionDir)tesseract_master\ccutil;$(SolutionDir)tesseract_master\ccstruct;$(SolutionDir)tesseract_master\classify;$(SolutionDir)tesseract_master\cube;$(SolutionDir)tesseract_master\cutil;$(SolutionDir)tesseract_master\dict;$(SolutionDir)tesseract_master\neural_networks\runtime;$(SolutionDir)tesseract_master\textord;$(SolutionDir)tesseract_master\viewer;$(SolutionDir)tesseract_master\opencl;$(SolutionDir)tesseract_master\wordrec;$(SolutionDir)leptonica\src</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <StringPooling>true</StringPooling>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -127,8 +120,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\tesseract_master\training\tessopt.cpp" />
-    <ClCompile Include="..\tesseract_master\training\unicharset_extractor.cpp" />
+    <ClCompile Include="..\tesseract_master\training\commandlineflags.cpp" />
+    <ClCompile Include="..\tesseract_master\training\mftraining.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
